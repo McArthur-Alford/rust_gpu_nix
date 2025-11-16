@@ -1,0 +1,21 @@
+[package]
+name = "wgpu-runner"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[dependencies]
+bytemuck.workspace = true
+clap = { workspace = true, features = ["derive"] }
+env_logger = { workspace = true }
+futures = { workspace = true, features = ["std"] }
+shared = { version = "0.1.0", path = "../../shaders/shared" }
+spirv-builder = { workspace = true, features = ["watch"] }
+strum = { workspace = true, features = ["std"] }
+wgpu = { workspace = true, features = ["spirv", "vulkan-portability"] }
+winit = { workspace = true }
+
+[lints]
+workspace = true

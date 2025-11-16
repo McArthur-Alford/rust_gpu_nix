@@ -1,0 +1,20 @@
+[workspace]
+resolver = "3"
+members = ["runners/wgpu-runner", "shaders/shared", "shaders/simplest-shader"]
+
+[workspace.lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = [
+  'cfg(target_arch, values("spirv"))',
+] }
+
+[workspace.dependencies]
+spirv-std = "0.9.0"
+glam = "0.30.9"
+bytemuck = { version = "1.24.0", features = ["derive"] }
+clap = "4.5.51"
+env_logger = "0.11.8"
+futures = "0.3.31"
+spirv-builder = "0.9.0"
+strum = "0.27.2"
+wgpu = "27.0.1"
+winit = "0.30.12"
