@@ -11,5 +11,5 @@ crate-type = ["dylib"]
 
 [dependencies]
 spirv-std = { workspace = true }
-shared = { path = "../shared" }
+shared = { workspace = true }
 glam = { workspace = true }
