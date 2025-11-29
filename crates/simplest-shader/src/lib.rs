@@ -2,6 +2,8 @@
 // HACK(eddyb) can't easily see warnings otherwise from `spirv-builder` builds.
 #![deny(warnings)]
 
+pub mod other;
+
 use shared::glam::{Vec4, vec4};
 use spirv_std::spirv;
 

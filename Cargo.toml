@@ -1,11 +1,6 @@
 [workspace]
 resolver = "3"
-members = [
-  "crates/runners/wgpu-runner",
-  "crates/shaders/shared",
-  "crates/shaders/simplest-shader",
-  "xtask",
-]
+members = ["crates/runner", "crates/shared", "crates/simplest-shader", "xtask"]
 exclude = ["shaders"]
 
 [workspace.lints.rust]
@@ -14,7 +9,7 @@ unexpected_cfgs = { level = "allow", check-cfg = [
 ] }
 
 [workspace.dependencies]
-spirv-std = "0.9.0"
+spirv-std = { git = "https://github.com/rust-gpu/rust-gpu", branch = "main" }
 glam = "0.30.9"
 bytemuck = { version = "1.24.0", features = ["derive"] }
 clap = { version = "4.5.51", features = ["derive"] }
@@ -23,6 +18,6 @@ futures = "0.3.31"
 strum = "0.27.2"
 wgpu = "27.0.1"
 winit = "0.30.12"
-shared = { path = "crates/shaders/shared" }
+shared = { path = "crates/shared" }
 tokio = "1.48.0"
 log = "0.4.28"
