@@ -1,6 +1,8 @@
 # What is this?
 A working example of building and running RustGPU projects on nix without Rustup or Cargo-GPU and without being forced onto nightly for spirv-builder.
 
+Also a really good template repo if you want to start writing rust-gpu on nix with wgpu/winnit, its pretty much as minimal as it gets and you can just jump straight into writing shaders.
+
 # How I Got Here?
 ## Rust-GPU
 rust-gpu is an awesome crate that adds a custom compiler target for spirv. As a result, it needs to do some rather ugly things (as far as i can tell) which force us onto a very specific nightly version.
