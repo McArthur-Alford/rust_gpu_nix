@@ -38,7 +38,7 @@ We can break this into a few things.
   - `builder` then builds the shader in `crates/simplest_shader` and sets two rust environment variables.
     - `SIMPLEST_SHADER_ENTRYPOINTS` for the .rs entrypoints module file.
     - `SIMPLEST_SHADER_PATH` for the path to the generated spirv file.
-  - Other shader crates can be added by adding additional calls to `build_shader` in `builder/srcr/main.rs`.
+  - Other shader crates can be added by adding additional calls to `build_shader` in `builder/src/main.rs`.
 
 # What Should Probably Change?
 This is a pretty clean and good solution. It would be really nice in future if cargo-gpu could ditch rustup and instead take two environment variables, `RUSTC` for the usual rustc install and `SPIRV_RUSTC` for the speicic nightly build needed to compile shaders. This would allow a lot more flexibility in how it is used.
