@@ -1,3 +1,3 @@
 fn main() {
-    runner::main();
+    runner::run();
 }
