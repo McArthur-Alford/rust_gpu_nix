@@ -21,6 +21,6 @@ pub fn main_vs(
         (vert_id - 1) as f32,
         ((vert_id & 1) * 2 - 1) as f32,
         0.0,
-        1.0,
+        8.0,
     );
 }

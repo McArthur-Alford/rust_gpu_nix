@@ -29,7 +29,7 @@ async fn main() {
             let status = std::process::Command::new(spirv_cargo).args([
                 "run",
                 "--manifest-path",
-                "shaders/Cargo.toml",
+                "builder/Cargo.toml",
             ]).env("PATH", new_path).status().expect("Failed to run spirv toolchain cargo for shaders.");
 
             if !status.success() {

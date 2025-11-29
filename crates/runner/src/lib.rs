@@ -1,3 +1,4 @@
 pub fn main() {
-    println!("MAGIC");
+    println!("{:?}", env!("SIMPLEST_SHADER_PATH"));
+    println!("{:?}", env!("SIMPLEST_SHADER_ENTRYPOINTS"));
 }

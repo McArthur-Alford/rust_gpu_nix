@@ -1,7 +1,7 @@
 [workspace]
 resolver = "3"
 members = ["crates/runner", "crates/shared", "crates/simplest-shader", "xtask"]
-exclude = ["shaders"]
+exclude = ["builder"]
 
 [workspace.lints.rust]
 unexpected_cfgs = { level = "allow", check-cfg = [
